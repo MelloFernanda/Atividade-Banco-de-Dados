@@ -7,9 +7,16 @@ public class CinematecaMain {
         FilmesDAO dao = new FilmesDAO();
         List<Filmes> filmes = dao.retrive();
 
+
         for (Filmes f: filmes){
             System.out.println(f);
         }
+
+
+        Interface primeiraJanela = new Interface();
+        primeiraJanela.setVisible(true);
+
+
 
     }
 }

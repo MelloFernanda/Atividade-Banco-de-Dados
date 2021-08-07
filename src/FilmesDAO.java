@@ -7,8 +7,8 @@ public class FilmesDAO {
     private Connection conn;
 
     public FilmesDAO() throws SQLException {
-        conn = DriverManager
-                .getConnection("jdbc:mysql://localhost/filmezeria?useTimezone=true&serverTimezone=UTC", "root", "admin");
+        conn =  new
+                ConnectionFactory().getConnection();
     }
 
     public void add(Filmes filme) throws SQLException {
