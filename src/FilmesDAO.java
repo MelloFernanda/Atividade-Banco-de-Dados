@@ -51,4 +51,19 @@ public class FilmesDAO {
         return filmes;
     }
 
+    public void update(Filmes f){
+        String sql = "update filmes set director=?, genero=?, ano=? where titulo=?";
+        try {
+            PreparedStatement stm = conn.prepareStatement(sql);
+            stm.setString(1, f.getDirector());
+            stm.setString(2, f.getGenero());
+            stm.setString(3, f.getAno());
+            stm.setString(4, f.getTitulo());
+            stm.execute();
+            stm.close();
+        } catch (SQLException ex){
+            throw new RuntimeException();
+        }
+    }
+
 }
