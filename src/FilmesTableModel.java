@@ -65,12 +65,12 @@ public class FilmesTableModel extends AbstractTableModel implements TableModelLi
         fireTableCellUpdated(rowIndex, columnIndex);
     }
 
-    @Override
-    public void tableChanged(TableModelEvent e) {
-        int i = e.getFirstRow();
-        System.out.println(i);
-        Filmes filme = filmes.get(i);
-        dao.update(filme);
-    }
+       @Override
+        public void tableChanged(TableModelEvent e) {
+            int i = e.getFirstRow();
+            System.out.println(i);
+            Filmes filme = filmes.get(i);
+            dao.update(filme);
+        }
 
 }
