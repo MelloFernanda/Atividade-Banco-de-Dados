@@ -7,17 +7,9 @@ public class CinematecaMain {
     public static void main(String[] args) throws SQLException {
         FilmesDAO dao = new FilmesDAO();
 
-        List<Filmes> filmes = dao.retrive();
-        for (Filmes f: filmes){
-            System.out.println(f);
-        }
-
-        Interface primeiraJanela = new Interface();
-        primeiraJanela.setVisible(true);
 
         FrameTable frame = new FrameTable();
         frame.setVisible(true);
-
 
     }
 }
